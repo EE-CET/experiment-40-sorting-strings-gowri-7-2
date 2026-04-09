@@ -1,13 +1,24 @@
 import java.util.Scanner;
 import java.util.Arrays;
-
+import java.util.*;
 public class SortStrings {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        // TODO: Read N
-        // TODO: Handle the newline after N
-        // TODO: Read N strings into an array
-        // TODO: Sort the array (Arrays.sort uses lexicographical order by default)
-        // TODO: Print the sorted strings, one per line
+        
+
+        int n = sc.nextInt();
+        sc.nextLine(); // consume leftover newline
+
+        String[] names = new String[n];
+
+        for (int i = 0; i < n; i++) {
+            names[i] = sc.nextLine();
+        }
+
+        Arrays.sort(names);
+
+        for (int i = 0; i < n; i++) {
+            System.out.println(names[i]);
+        }
     }
 }
